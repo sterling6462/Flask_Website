@@ -11,28 +11,28 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
 
     {% if title %}
-        <title>Flask Blog - {{ title }}</title>
+        <title>Hoshi Blog - {{ title }}</title>
     {% else %}
-        <title>Flask Blog</title>
+        <title>Hoshi Blog</title>
     {% endif %}
 </head>
 <body>
     <header class="site-header">
       <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
         <div class="container">
-          <a class="navbar-brand mr-4" href="/">Flask Blog</a>
+          <a class="navbar-brand mr-4" href="/">Hoshi's Blog</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarToggle">
             <div class="navbar-nav mr-auto">
-              <a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a>
-              <a class="nav-item nav-link" href="{{ url_for('about') }}">About</a>
+              <a class="nav-item nav-link ff" href="{{ url_for('home') }}">Home</a>
+              <a class="nav-item nav-link ff" href="{{ url_for('about') }}">About</a>
+              <a class="nav-item nav-link ff" href="{{ url_for('new_post') }}">New Post</a>
             </div>
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
               {% if current_user.is_authenticated %}
-                <a class="nav-item nav-link" href="{{ url_for('new_post') }}">New Post</a>
                 <a class="nav-item nav-link" href="{{ url_for('account') }}">Account</a>
                 <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
               {% else %}
@@ -44,6 +44,8 @@
         </div>
       </nav>
     </header>
+
+
     <main role="main" class="container">
       <div class="row">
         <div class="col-md-8">
@@ -60,13 +62,12 @@
         </div>
         <div class="col-md-4">
           <div class="content-section">
-            <h3>Our Sidebar</h3>
-            <p class='text-muted'>You can put any information here you'd like.
+            <h3>Nhóm phát triển</h3>
+            <p class='text-muted'> Được phát triển bởi nhóm sinh viên trường Đại học Bách khoa - Đại học Đà Nẵng
               <ul class="list-group">
-                <li class="list-group-item list-group-item-light">Latest Posts</li>
-                <li class="list-group-item list-group-item-light">Announcements</li>
-                <li class="list-group-item list-group-item-light">Calendars</li>
-                <li class="list-group-item list-group-item-light">etc</li>
+                <li class="list-group-item list-group-item-light">Nguyễn Thị Hoài Linh</li>
+                <li class="list-group-item list-group-item-light">Nguyễn Thị Như Ngọc</li>
+                <li class="list-group-item list-group-item-light">Trần Thị Phương Trâm</li>
               </ul>
             </p>
           </div>

@@ -1,29 +1,51 @@
 body {
-    background: #fafafa;
-    color: #333333;
+    background: #E8E8CC;
+    color: #142F43;
     margin-top: 5rem;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    color: #444444;
+    color: #0B4619;
   }
   
   .bg-steel {
-    background-color: #5f788a;
+    background-color:#0B4619;
   }
-  
+  /* tên blog */
+  .site-header .navbar-brand{
+    color: #FFCC1D;
+    font-weight: bold;
+
+  }
+
+  /* thanh header phải */
   .site-header .navbar-nav .nav-link {
-    color: #cbd5db;
-  }
-  
-  .site-header .navbar-nav .nav-link:hover {
     color: #ffffff;
   }
   
-  .site-header .navbar-nav .nav-link.active {
-    font-weight: 500;
+  .site-header .navbar-nav .nav-link:hover {
+    color: #FFCC1D;
+    font-weight: bold;
   }
   
+  .site-header .navbar-nav .nav-link.active {
+    font-weight: bold;
+  }
+  
+  /* thanh header trái */
+  .site-header .navbar-nav .ff {
+    color: #ffffff;
+  }
+  
+  .site-header .navbar-nav .ff:hover {
+    color: #116530;
+    font-weight: bold;
+  }
+  
+  .site-header .navbar-nav .ff.active {
+    font-weight: bold;
+  }
+
   .content-section {
     background: #ffffff;
     padding: 10px 20px;
@@ -33,11 +55,12 @@ body {
   }
   
   .article-title {
-    color: #444444;
+    color: #0B4619;
+    font-weight: bold;
   }
   
   a.article-title:hover {
-    color: #428bca;
+    color: #b3b331;
     text-decoration: none;
   }
   
@@ -54,11 +77,11 @@ body {
   .article-metadata {
     padding-bottom: 1px;
     margin-bottom: 4px;
-    border-bottom: 1px solid #e3e3e3
+    border-bottom: 1px solid #116530
   }
   
   .article-metadata a:hover {
-    color: #333;
+    color: #142F43;
     text-decoration: none;
   }
   
@@ -78,3 +101,5 @@ body {
   .account-heading {
     font-size: 2.5rem;
   }
+
+  
