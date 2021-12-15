@@ -6,14 +6,16 @@ from FlaskBlog import app, db, bcrypt
 from FlaskBlog.forms import RegistrationForm, LoginForm, UpdateAccountForm, PostForm
 from FlaskBlog.models import User, Post
 from flask_login import login_user, current_user, logout_user, login_required
+# from FlaskBlog.errors import errors
+# from flask import Blueprint, render_template
 
-
+#trang chu
 @app.route("/")
 @app.route("/home")
 def home():
     page = request.args.get('page', 1, type=int)
     posts = Post.query.order_by(Post.date_posted.desc()).paginate(page=page, per_page=5)
-    return render_template('home.html', posts=posts)
+    return render_template('home.html', posts=posts) #duong dan
 
 
 @app.route("/about")
@@ -54,7 +56,7 @@ def login():
 
 @app.route("/logout")
 def logout():
-    logout_user()
+    logout_user() #ham thu vien
     return redirect(url_for('home'))
 
 
@@ -153,3 +155,18 @@ def user_posts(username):
         .order_by(Post.date_posted.desc())\
         .paginate(page=page, per_page=5)
     return render_template('user_posts.html', posts=posts, user=user)
+
+
+# errors
+
+@app.errorhandler(404)
+def error_404(e):
+    return render_template('404.html')
+
+@app.errorhandler(403)
+def error_403(e):
+    return render_template('403.html')
+
+@app.errorhandler(500)
+def error_500(e):
+    return render_template('500.html')

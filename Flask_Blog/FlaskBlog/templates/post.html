@@ -17,6 +17,7 @@
       <p class="article-content">{{ post.content }}</p>
     </div>
   </article>
+  
   <!-- Modal -->
   <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -28,7 +29,9 @@
           </button>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <!---dung bootstrap --->
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
+          
           <form action="{{ url_for('delete_post', post_id=post.id) }}" method="POST">
             <input class="btn btn-danger" type="submit" value="Delete">
           </form>
